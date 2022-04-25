@@ -1,12 +1,12 @@
 class PhotoSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
-  attributes :id, :caption, :featured_image
-  
-  def featured_image
-    if object.featured_image.attached?
-      {
-        url: rails_blob_url(object.featured_image)
-      }
-    end
-  end
+  #attributes :id, :caption, :featured_image
+
+  # def featured_image
+  #   if object.featured_image.attached?
+  #     {
+  #       url: rails_blob_url(object.featured_image)
+  #     }
+  #   end
+  # end
 end
