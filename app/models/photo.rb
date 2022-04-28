@@ -6,7 +6,8 @@ class Photo < ApplicationRecord
   # end
 
   def self.all_images
-    all.map {|photo| photo.image}
+    images = all.sort {|photo| photo.created_at}
+    images.map {|photo| photo.image}
   end
 
 end
